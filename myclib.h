@@ -28,15 +28,17 @@ typedef struct stringNode
   struct stringNode *right;
 }stringNode;
 
-int *heapSortInt(int *arr);
-intNode *minIntHeapConstruct(int *arr);
-intNode *maxIntHeapConstruct(int *arr);
-float *heapSortFloat(float *arr);
-floatNode *minFloatHeapConstruct(float *arr);
-floatNode *maxFloatHeapConstruct(float *arr);
-char **heapSortString(char **);
-stringNode *minStringHeapConstruct(char **arr);
-stringNode *maxStringHeapConstruct(char **arr);
+void heapSortInt(int arr[], int size);
+void minIntHeapConstruct(int arr[], int size, int root);
+void maxIntHeapConstruct(int arr[], int size, int root);
+void heapSortFloat(float *arr);
+void minFloatHeapConstruct(float *arr);
+void maxFloatHeapConstruct(float *arr);
+void heapSortString(char **arr);
+void minStringHeapConstruct(char **arr);
+void maxStringHeapConstruct(char **arr);
+void swap(int *one, int *two);
+
 
 int intBinarySearch(int *arrSorted);
 float floatBinarySearch(float *arrSorted);
@@ -55,7 +57,7 @@ float deleteFloatFromBST(floatNode *root, float toDelete);
 void printFloatBST(floatNode *root);
 
 void insertStringIntoBST(stringNode *root, char *toInsert);
-float deleteFloatFromBST(stringNode *root, char *toDelete);
-void printFloatBST(stringNode *root);
+float deleteStringFromBST(stringNode *root, char *toDelete);
+void printStringBST(stringNode *root);
 
 #endif
